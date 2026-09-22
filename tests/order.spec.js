@@ -4,7 +4,7 @@ import { checkoutProducts } from "../test-data/productData.js";
 
 
 test.describe("Order Validation", () => {
-test("Validating Overview Page", async ({ OrderCompletionPage }) => {
+test("Validating Overview Page of EComm", async ({ OrderCompletionPage }) => {
 
      const itemCount = await OrderCompletionPage.cartItem.count();
 
