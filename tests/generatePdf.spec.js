@@ -6,7 +6,7 @@ import { PDFParse } from "pdf-parse";
 import { checkOutData } from "../test-data/checkOutData.js"
 import { checkoutProducts } from "../test-data/productData.js"
 
-test("Verify downloaded receipt PDF", async ({ page, OrderCompletionPage, generatePdfPage }) => {
+test("Verify downloaded receipt PDF with details", async ({ page, OrderCompletionPage, generatePdfPage }) => {
 
     await page.pause();
 
