@@ -29,7 +29,7 @@ test("Checkout Button should be disabled when the cart is empty", async ({ addTo
 
 });
 
-test("Validating multiple product addition to cart", async ({ page, addToCartPage }) => {
+test("Validating multiple products addition to cart", async ({ page, addToCartPage }) => {
 
     const products = checkoutProducts.map(product => product.name);
 
