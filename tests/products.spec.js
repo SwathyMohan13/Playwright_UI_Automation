@@ -6,7 +6,7 @@ import { productData } from "../test-data/productData.js";
 const products = Object.values(productData);
 
 for (const product of products) {
-    test(`Verify ${product.name}`, async ({ productPage }) => {
+    test(`Verify ${product.name} names` , async ({ productPage }) => {
         await productPage.openProducts(product.name);
 
         await expect(productPage.productDetailsName)
