@@ -67,11 +67,19 @@ pipeline {
                 }
             }
         }
+
+        stage('Check Test Results') {
+            steps {
+                bat 'dir test-results /s'
+            }
+        }
     }
 
     post {
 
         always {
+            echo 'Archiving Playwright test results...'
+
             archiveArtifacts(
                 artifacts: 'test-results/**/*',
                 allowEmptyArchive: true
