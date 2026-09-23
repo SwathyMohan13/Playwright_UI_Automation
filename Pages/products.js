@@ -22,6 +22,7 @@ export class Products {
         await this.page.waitForURL(/inventory-item\.html/);
     }
 
+
     async addToCart() {
         await this.productDetailsCart.click();
     }
