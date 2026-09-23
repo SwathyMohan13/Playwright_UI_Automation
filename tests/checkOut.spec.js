@@ -5,7 +5,7 @@ import { invalidCheckOutData } from "../test-data/checkOutData.js";
 
 
 test.describe("Checkout Page Validation", () => {
-test("Validating Customer Details", async ({ page, checkOutDetailsPage }) => {
+test("Validating Customer Details with credentials", async ({ page, checkOutDetailsPage }) => {
 
    await expect(checkOutDetailsPage.title).toHaveText("Checkout: Your Information");
    await checkOutDetailsPage.enteringDetails(
