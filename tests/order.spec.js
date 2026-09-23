@@ -6,9 +6,7 @@ import { checkoutProducts } from "../test-data/productData.js";
 test.describe("Order Validation", () => {
 test("Validating Overview Page of EComm", async ({ OrderCompletionPage }) => {
 
-     const itemCount = await OrderCompletionPage.cartItem.count();
-
-     expect(itemCount).toBeGreaterThan(0);
+     await expect(OrderCompletionPage.cartItem).not.toHaveCount(0);
      await expect(OrderCompletionPage.pageTitle).toHaveText("Checkout: Overview");
      await expect(OrderCompletionPage.summaryInfo).not.toBeEmpty();
 
