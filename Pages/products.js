@@ -18,6 +18,7 @@ export class Products {
         });
 
         await product.locator(".inventory_item_name").click();
+        await this.productDetailsName.waitFor();
     }
 
     async addToCart() {
